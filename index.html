@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Conceptual AI APIs</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css">
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+    }
+    .topbar {
+      background-color: #1e1e1e;
+      padding: 0.5em;
+    }
+    .topbar-wrapper img {
+      content: url('logo.png');
+      height: 40px;
+    }
+    .swagger-ui .scheme-container,
+    .swagger-ui .opblock,
+    .swagger-ui .info,
+    .swagger-ui .response,
+    .swagger-ui .parameters-container,
+    .swagger-ui .model-box {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+    .swagger-ui .opblock-summary-method {
+      color: #fff !important;
+    }
+  </style>
+</head>
+<body>
+<div id="swagger-ui"></div>
+<script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+<script>
+  const ui = SwaggerUIBundle({
+    url: "swagger.json",
+    dom_id: '#swagger-ui',
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIBundle.SwaggerUIStandalonePreset
+    ],
+    layout: "BaseLayout",
+    docExpansion: "none",
+    deepLinking: true
+  });
+</script>
+</body>
+</html>
